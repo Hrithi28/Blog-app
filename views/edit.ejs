@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+    <div class="form-container">
+        <div class="page-header">
+            <h1>Edit Post</h1>
+            <p>Update your existing post.</p>
+        </div>
+
+        <form action="/posts/edit/<%= post.id %>" method="POST" class="post-form">
+            <div class="form-group">
+                <label for="title">Post Title</label>
+                <input type="text" id="title" name="title" required value="<%= post.title %>" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea id="content" name="content" rows="10" required
+                    class="form-control"><%= post.content %></textarea>
+            </div>
+
+            <div class="form-actions">
+                <a href="/" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+    <div class="form-container">
+        <div class="page-header">
+            <h1>Create a New Post</h1>
+            <p>Share your ideas with the world.</p>
+        </div>
+
+        <form action="/posts/new" method="POST" class="post-form">
+            <div class="form-group">
+                <label for="title">Post Title</label>
+                <input type="text" id="title" name="title" required placeholder="Enter an engaging title"
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea id="content" name="content" rows="10" required placeholder="Write your post content here..."
+                    class="form-control"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <a href="/" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn btn-primary">Publish Post</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>
